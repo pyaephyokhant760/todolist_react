@@ -1,45 +1,13 @@
 import React from 'react'
-import Form from './Form'
+import Cart from './Cart'
 
-const List = () => {
+const List = (test) => {
+  console.log(test);
+  
   return (
     <div className='mx-auto w-50'>
+      <Cart test={test}/>
       
-      <div>
-        <ol className='list-group mt-3 shadow-sm'>
-          <div className='list-group-item'>
-            <div className='row'>
-              <div className='col-10'>
-                To Do List Task message
-              </div>
-              <div className='col-2'>Task Message</div>
-            </div>
-
-          </div>
-        </ol>
-        <ol className='list-group mt-3 shadow-sm'>
-          <div className='list-group-item'>
-            <div className='row'>
-              <div className='col-10'>
-                To Do List Task message
-              </div>
-              <div className='col-2'>Task Message</div>
-            </div>
-
-          </div>
-        </ol>
-        <ol className='list-group mt-3 shadow-sm'>
-          <div className='list-group-item'>
-            <div className='row'>
-              <div className='col-10'>
-                To Do List Task message
-              </div>
-              <div className='col-2'>Task Message</div>
-            </div>
-
-          </div>
-        </ol>
-      </div>
     </div>
   )
 }
