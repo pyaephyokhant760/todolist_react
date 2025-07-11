@@ -12,24 +12,28 @@ function App() {
     const data = await api.get("/posts");
 
     // console.log(data);
-    SetTest(data.data)
+    SetTest(data.data);
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-   const  submitTask = (userTask) => {
-   const data =  { "id": 1000, "title": userTask, "views": 100 }
-   console.log(data);
-  }
+  const submitTask = async (userTask) => {
+    const data = {
+      id: '001',
+      title: userTask,
+      views: 100,
+    };
+   const res = await api.post('posts', data);
+  console.log(res);
+    
+  };
 
-  
-  
   return (
     <div className="App mt-5">
-      <Form submitTask={submitTask}/>
-      <List test={test}/>
+      <Form submitTask={submitTask} />
+      <List test={test} />
     </div>
   );
 }
