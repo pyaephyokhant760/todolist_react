@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
-const Form = (submitTask) => {
-
+const Form = ({submitTask}) => {
+  
+  
   const [userTask , setUserTask] = useState();
 
   // const  submitTask = () => {
