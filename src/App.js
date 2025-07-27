@@ -17,23 +17,35 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [test]);
 
   const submitTask = async (userTask) => {
     const data = {
-      id: '001',
+      
       title: userTask,
       views: 100,
+      complete: false,
     };
-   const res = await api.post('posts', data);
-  console.log(res);
-    
+    const res = await api.post("posts", data);
   };
-
+  const deleteTask = async (tt_id) => {
+    try {
+      const res = await api.delete(`posts/${tt_id}`);
+      console.log("Deleted", res.data);
+    } catch (error) {
+      console.error("Delete failed:", error);
+    }
+  };
+  const updateTask = async (tt_id, complete) => {
+    console.log(tt_id, complete);
+    const res = await api.patch(`posts/${tt_id}`, {
+      complete: complete,
+    });
+  };
   return (
     <div className="App mt-5">
       <Form submitTask={submitTask} />
-      <List test={test} />
+      <List test={test} deleteTask={deleteTask} updateTask={updateTask} />
     </div>
   );
 }
