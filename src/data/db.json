@@ -1,36 +1,22 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "a title",
-      "views": 100
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "views": 200
-    },
-    {
-      "id": "001",
-      "title": "dfdff",
-      "views": 100
-    },
-    {
-      "id": "001",
-      "title": "zxzx",
-      "views": 100
+      "id": "f14f",
+      "title": "fdfdf",
+      "views": 100,
+      "complete": true
     }
   ],
   "comments": [
     {
       "id": "1",
       "text": "a comment about post 1",
-      "postId": "1"
+      "postId": null
     },
     {
       "id": "2",
       "text": "another comment about post 1",
-      "postId": "1"
+      "postId": null
     }
   ],
   "profile": {
